@@ -688,7 +688,7 @@
         ></div>
       </div>
     </div>
-    <!-- END REVOLUTION SLIDER -->
+<!-- END REVOLUTION SLIDER -->
 <div class="service-section-1 container">
     <div class="row">
         <!-- Box 1 -->
@@ -743,9 +743,26 @@
 </div>
 
 <style>
- /* Icon styling - White color */
+    /* Default (Laptop) - White border and white icons */
+    .service-section-1 .service.layout-1 {
+        background: transparent !important;
+        color: #2c3e50;
+        border-radius: 15px;
+        padding: 30px 20px;
+        transition: all 0.3s ease;
+        border: 2px solid #ffffff; /* White border for laptop */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .service-section-1 .service.layout-1:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        background: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Icon styling - White color for laptop */
     .service-section-1 .service.layout-1 .icon i {
-        color: white !important;
+        color: #ffffff !important; /* White icons for laptop */
         font-size: 2.5rem !important;
         transition: all 0.3s ease;
     }
@@ -753,6 +770,75 @@
     .service-section-1 .service.layout-1:hover .icon i {
         transform: scale(1.1);
         color: #f8f9fa !important;
+    }
+
+    .service-section-1 .service.layout-1 .title {
+        color: #ffffff !important; /* White title for laptop */
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-decoration: none;
+        margin-top: 15px;
+        display: block;
+    }
+
+    .service-section-1 .service.layout-1 .dis {
+        color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for description */
+        line-height: 1.6;
+        margin-top: 15px;
+    }
+
+    /* Icon container styling */
+    .service-section-1 .service.layout-1 .icon {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* Ensure proper spacing */
+    .service-section-1 .row {
+        margin: 0 -10px;
+    }
+
+    .service-section-1 .col-md-4 {
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    /* Mobile-specific - Black border and grey icons */
+    @media (max-width: 768px) {
+        .service-section-1 .service.layout-1 {
+            background: transparent !important;
+            border: 2px solid #000000 !important; /* Black border for mobile */
+        }
+        
+        .service-section-1 .service.layout-1:hover {
+            background: rgba(0, 0, 0, 0.05) !important;
+        }
+
+        /* Grey icons for mobile */
+        .service-section-1 .service.layout-1 .icon i {
+            color: #6c757d !important; /* Grey icons for mobile */
+        }
+
+        .service-section-1 .service.layout-1:hover .icon i {
+            color: #495057 !important; /* Darker grey on hover for mobile */
+        }
+
+        .service-section-1 .service.layout-1 .title {
+            color: #2c3e50 !important; /* Dark title for mobile */
+        }
+
+        .service-section-1 .service.layout-1 .dis {
+            color: #6c757d; /* Grey description for mobile */
+        }
+    }
+
+    /* Extra safety - Override any inline styles */
+    .service-section-1 .service.layout-1[style*="background-color"] {
+        background: transparent !important;
+    }
+    
+    .service-section-1 .service.layout-1[style*="background:"] {
+        background: transparent !important;
     }
 </style>
   <!--============= About Us =============-->
@@ -1110,7 +1196,7 @@
       </div>
     </div>
    </section>
-    <!-- Our Fleet -->
+ <!-- Our Fleet -->
 <div class="section padding-tb-100px section-ba-2">
     <div class="container">
         <!-- Title -->
@@ -1135,62 +1221,62 @@
         <div class="row">
             <!-- Reefer & Temperature-Controlled Fleet -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="price-table h-100 d-flex flex-column text-center border rounded p-3" style="background: white;">
-                    <div class="title main-color fw-bold fs-6 mb-2">
+                <div class="price-table h-100 d-flex flex-column text-center border rounded p-2" style="background: white;">
+                    <div class="title main-color fw-bold fs-7 mb-1">
                         Reefer & Temperature-Controlled Fleet
                     </div>
-                    <div class="price my-2">
-                        <i class="fa fa-snowflake-o fa-2x text-warning"></i>
+                    <div class="price my-1">
+                        <i class="fa fa-snowflake-o fa-1x text-warning"></i>
                     </div>
-                    <div class="per-mile text-muted fs-7 mb-2">Refrigerated Units</div>
-                    <ul class="elements text-start flex-grow-1 mb-2" style="font-size: 0.9rem;">
-                        <li class="mb-1">1–3 Ton Trucks — <strong>81</strong></li>
-                        <li class="mb-1">Standard Roof Vans — <strong>54</strong></li>
-                        <li class="mb-1">Hi Roof Vans — <strong>40</strong></li>
+                    <div class="per-mile text-muted fs-8 mb-1">Refrigerated Units</div>
+                    <ul class="elements text-start flex-grow-1 mb-1" style="font-size: 0.8rem;">
+                        <li class="mb-0">1–3 Ton Trucks — <strong>81</strong></li>
+                        <li class="mb-0">Standard Roof Vans — <strong>54</strong></li>
+                        <li class="mb-0">Hi Roof Vans — <strong>40</strong></li>
                     </ul>
-                    <div class="padding-25px mt-auto">
-                        <a href="#" class="nile-bottom sm-block btn btn-warning text-white btn-sm">Explore Fleet</a>
+                    <div class="padding-25px mt-auto pt-2">
+                        <a href="#" class="nile-bottom sm-block btn btn-warning text-white btn-sm" style="padding: 4px 10px; font-size: 0.8rem; width: auto; display: inline-block;">Explore Fleet</a>
                     </div>
                 </div>
             </div>
 
             <!-- Heavy & General Transport -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="price-table active h-100 d-flex flex-column text-center border rounded p-3" style="background: linear-gradient(135deg, #FF8C00, #FFA500);">
-                    <div class="title fw-bold fs-6 mb-2" style="color: white;">
+                <div class="price-table active h-100 d-flex flex-column text-center border rounded p-2" style="background: linear-gradient(135deg, #e96901, #e96901);">
+                    <div class="title fw-bold fs-7 mb-1" style="color: white;">
                         Heavy & General Transport
                     </div>
-                    <div class="price my-2">
-                        <i class="fa fa-truck fa-2x" aria-hidden="true" style="color: white;"></i>
+                    <div class="price my-1">
+                        <i class="fa fa-truck fa-1x" aria-hidden="true" style="color: white;"></i>
                     </div>
-                    <div class="per-mile fs-7 mb-2" style="color: white;">High-Capacity Hauling</div>
-                    <ul class="elements text-start flex-grow-1 mb-2" style="font-size: 0.9rem; color: white;">
-                        <li class="mb-1">Long Vehicles — Up to 10 Ton — <strong>12</strong></li>
-                        <li class="mb-1">Trailer Units — Up to 30 Ton — <strong>10</strong></li>
+                    <div class="per-mile fs-8 mb-1" style="color: white;">High-Capacity Hauling</div>
+                    <ul class="elements text-start flex-grow-1 mb-1" style="font-size: 0.8rem; color: white;">
+                        <li class="mb-0">Long Vehicles — Up to 10 Ton — <strong>12</strong></li>
+                        <li class="mb-0">Trailer Units — Up to 30 Ton — <strong>10</strong></li>
                     </ul>
-                    <div class="padding-25px mt-auto">
-                        <a href="#" class="nile-bottom sm-block btn btn-light text-warning btn-sm fw-bold">Explore Fleet</a>
+                    <div class="padding-25px mt-auto pt-2">
+                        <a href="#" class="nile-bottom sm-block btn btn-light text-warning btn-sm fw-bold" style="padding: 4px 10px; font-size: 0.8rem; width: auto; display: inline-block;">Explore Fleet</a>
                     </div>
                 </div>
             </div>
 
             <!-- Utility & Support Fleet -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="price-table h-100 d-flex flex-column text-center border rounded p-3" style="background: white;">
-                    <div class="title main-color fw-bold fs-6 mb-2">
+                <div class="price-table h-100 d-flex flex-column text-center border rounded p-2" style="background: white;">
+                    <div class="title main-color fw-bold fs-7 mb-1">
                         Utility & Support Fleet
                     </div>
-                    <div class="price my-2">
-                        <i class="fa fa-bus fa-2x text-warning"></i>
+                    <div class="price my-1">
+                        <i class="fa fa-bus fa-1x text-warning"></i>
                     </div>
-                    <div class="per-mile text-muted fs-7 mb-2">Operational Support Vehicles</div>
-                    <ul class="elements text-start flex-grow-1 mb-2" style="font-size: 0.9rem;">
-                        <li class="mb-1">4x4 Double Cabin — <strong>15</strong></li>
-                        <li class="mb-1">Coasters — <strong>3</strong></li>
-                        <li class="mb-1">Buses — <strong>2</strong></li>
+                    <div class="per-mile text-muted fs-8 mb-1">Operational Support Vehicles</div>
+                    <ul class="elements text-start flex-grow-1 mb-1" style="font-size: 0.8rem;">
+                        <li class="mb-0">4x4 Double Cabin — <strong>15</strong></li>
+                        <li class="mb-0">Coasters — <strong>3</strong></li>
+                        <li class="mb-0">Buses — <strong>2</strong></li>
                     </ul>
-                    <div class="padding-25px mt-auto">
-                        <a href="#" class="nile-bottom sm-block btn btn-warning text-white btn-sm">Explore Fleet</a>
+                    <div class="padding-25px mt-auto pt-2">
+                       <a href="#" class="nile-bottom sm-block btn btn-warning text-white btn-sm" style="padding: 4px 10px; font-size: 0.8rem; width: auto; display: inline-block;">Explore Fleet</a>
                     </div>
                 </div>
             </div>
@@ -1202,11 +1288,12 @@
     /* Box size reduction */
     .price-table {
         transition: all 0.3s ease;
+        min-height: 280px; /* Reduced height */
     }
 
     .price-table:hover {
         transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(223, 216, 216, 0.1);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
     /* Button hover effects */
@@ -1231,19 +1318,25 @@
         transform: translateY(-1px);
     }
 
-    /* Custom smaller font size */
+    /* Custom smaller font sizes */
     .fs-7 {
-        font-size: 0.875rem !important;
+        font-size: 0.8rem !important;
+        line-height: 1.2;
+    }
+    
+    .fs-8 {
+        font-size: 0.75rem !important;
     }
 
     /* List item styling */
     .elements {
         list-style: none;
         padding-left: 0;
+        margin-bottom: 0;
     }
 
     .elements li {
-        padding: 4px 0;
+        padding: 2px 0;
     }
 
     /* Ensure equal height */
@@ -1259,6 +1352,16 @@
 
     .mt-auto {
         margin-top: auto;
+    }
+
+    /* Icon size reduction */
+    .price-table .fa-1x {
+        font-size: 1.5rem !important;
+    }
+
+    /* Reduced padding for compact look */
+    .padding-25px {
+        padding: 10px 0 !important;
     }
 </style>
 <!-- Map & Contact -->
