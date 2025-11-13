@@ -57,18 +57,21 @@
       type="text/css"
       href="assets/rslider/css/settings.css"
     />
-    <style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+      
       .logos-slider {
         overflow: hidden;
         position: relative;
         width: 100%;
-        background: transparent; /* white background, not black */
+        background: transparent;
         padding: 30px 0;
       }
 
       .logos-track {
         display: flex;
-        width: calc(250px * 12); /* number of images * width */
+        width: calc(250px * 12);
         animation: scroll 30s linear infinite;
       }
 
@@ -76,12 +79,12 @@
         width: 180px;
         height: auto;
         margin: 0 30px;
-        filter: brightness(0.8); /* slightly dull look */
+        filter: brightness(0.8);
         transition: filter 0.3s;
       }
 
       .logos-track img:hover {
-        filter: brightness(1); /* brighten on hover */
+        filter: brightness(1);
       }
 
       @keyframes scroll {
@@ -92,253 +95,267 @@
           transform: translateX(-50%);
         }
       }
+
+      .fleet-card {
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        background: #fff;
+      }
+
+      .fleet-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .fleet-card .img-wrap {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        background-color: #f5f5f5;
+        display: block;
+      }
+
+      .fleet-card .img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .fleet-card .img-wrap .overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 18px;
+        background: rgba(0,0,0,0.66);
+        color: #fff;
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 0.35s ease, transform 0.35s ease;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .fleet-card .img-wrap:hover .overlay,
+      .fleet-card .img-wrap:focus .overlay {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .fleet-card .img-wrap .overlay h4 {
+        font-size: 18px;
+        margin: 0 0 8px;
+        color: #ffcc00;
+        line-height: 1.1;
+      }
+
+      .fleet-card .img-wrap .overlay p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+        max-width: 90%;
+      }
+
+      .hidden-fleet {
+        display: none;
+      }
+
+      @media (min-width: 992px) {
+        .col-lg-3 {
+          flex: 0 0 25%;
+          max-width: 25%;
+        }
+      }
+
+      .pagination {
+        justify-content: center;
+        margin-top: 40px;
+      }
+
+      .pagination .page-link {
+        color: #333;
+        border: 1px solid #ddd;
+      }
+
+      .pagination .page-item.active .page-link {
+        background-color: #008cba;
+        border-color: #008cba;
+      }
+
+      .pagination .page-link:hover {
+        background-color: #f0f0f0;
+      }
     </style>
   </head>
 
   <body class="background-white">
     <!--  Header  -->
-    <header class="background-white">
-      <div class="header-output">
-        <div class="header-output">
-          <div class="header-in">
-            <!-- Up Head -->
-            <div class="up-head d-none d-lg-block background-grey-4">
-              <div class="container">
-                <div class="row">
-                  <div class="col-xl-8 col-lg-12">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <i class="fa fa-phone margin-right-10px"></i> +971 55
-                        833 0167
-                      </div>
-                      <div class="col-md-4">
-                        <i class="fa fa-envelope-o margin-right-10px"></i>
-                        info@nextgentransport.com
-                      </div>
-                      <div class="col-md-4">
-                        <i class="fa fa-map-marker margin-right-10px"></i> Next
-                        Gen HQ
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xl-4 d-none d-xl-block">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <!-- lang dropdown -->
-                        <div class="dropdown show">
-                          <a
-                            class="dropdown-toggle text-white text-uppercase"
-                            href="#"
-                            role="button"
-                            id="dropdownMenuLink"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            <span
-                              class="flag-icon flag-icon-us margin-right-8px"
-                            ></span>
-                            English
-                          </a>
+   </head>
 
-                          <div
-                            class="dropdown-menu text-small text-uppercase"
-                            aria-labelledby="dropdownMenuLink"
-                          >
-                            <a class="dropdown-item" href="#"
-                              ><span
-                                class="flag-icon flag-icon-es margin-right-8px"
-                              ></span>
-                              Spanish</a
-                            >
-                            <a class="dropdown-item" href="#"
-                              ><span
-                                class="flag-icon flag-icon-mr margin-right-8px"
-                              ></span>
-                              Arabic</a
-                            >
-                            <a class="dropdown-item" href="#"
-                              ><span
-                                class="flag-icon flag-icon-fr margin-right-8px"
-                              ></span>
-                              French</a
-                            >
-                            <a class="dropdown-item" href="#"
-                              ><span
-                                class="flag-icon flag-icon-de margin-right-8px"
-                              ></span>
-                              German</a
-                            >
-                          </div>
-                        </div>
-                        <!-- // lang dropdown -->
-                      </div>
-
-                      <div class="col-lg-6">
-                        <!--  Social -->
-                        
-                        <!-- // Social -->
-                      </div>
-                    </div>
-                  </div>
+  <body>
+    <header>
+  <div id="fixed-header-dark" class="header-output fixed-header">
+    <div class="header-output">
+      <div class="container header-in">
+        <!-- Up Head -->
+        <div class="up-head d-none d-lg-block">
+          <div class="row">
+            <div class="col-xl-8 col-lg-12">
+              <div class="row">
+                <div class="col-md-4">
+                  <i class="fa fa-phone margin-right-10px"></i> +971 55 833
+                  0167
+                </div>
+                <div class="col-md-4">
+                  <i class="fa fa-envelope-o margin-right-10px"></i>
+                  info@nextgentransport.com
+                </div>
+                <div class="col-md-4">
+                  <i class="fa fa-map-marker margin-right-10px"></i> Next
+                  Gen HQ
                 </div>
               </div>
             </div>
-            <!-- // Up Head -->
-            <div class="container">
-              <div class="position-relative">
-                <div class="row">
-                  <div class="col-lg-3 col-md-12">
+            <div class="col-xl-4 d-none d-xl-block">
+              <div class="row">
+                <div class="col-lg-6">
+                  <!-- lang dropdown -->
+                  <div class="dropdown show">
                     <a
-                      id="logo"
-                      href="home-1.html"
-                      class="d-inline-block margin-tb-15px"
-                      ><img src="assets/img/No bg.png" width="120px" alt=""
-                    /></a>
-                    <a
-                      class="mobile-toggle padding-15px background-second-color border-radius-3"
+                      class="dropdown-toggle text-white text-uppercase"
                       href="#"
-                      ><i class="fa fa-bars"></i
-                    ></a>
-                  </div>
-                  <div class="col-lg-7 col-md-12 position-inherit">
-                    <ul
-                      id="menu-main"
-                      class="nav-menu float-xl-left text-lg-center link-padding-tb-25px dropdown-dark"
+                      role="button"
+                      id="dropdownMenuLink"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
                     >
-                        <li>
-                          <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                          <a href="index.html#about">About</a>
-                        </li>
-                        <li>
-                          <a href="services.html">Services</a>
-                        </li>
-                        <li>
-                          <a href="index.html#contact">Contact</a>
-                        </li>
-                        <li>
-                          <a href="transport.html">Transport</a>
-                        </li>
-                      </ul>
-                    </ul>
-
-                    <div
-                      class="d-none d-xl-block pull-right model-link margin-top-15px"
-                    >
-                      <a
-                        id="cart-link"
-                        class="model-link margin-right-25px text-dark opacity-hover-8"
-                        href="#"
-                      >
-                        <span>3</span><i class="fa fa-shart"></i>
-                      </a>
-                      <div class="cart-model">
-                        <div class="media">
-                          <a href="#">
-                            <img
-                              class="d-flex align-self-start mr-3 width-50px"
-                              src="assets/img/cart-1.jpg"
-                              alt="Generic placeholder image"
-                            />
-                          </a>
-                          <div class="media-body">
-                            <a href="#" class="close"
-                              ><i class="fa fa-window-close"></i
-                            ></a>
-                            <h5 class="mt-0">
-                              <a href="#">Cargo Transportation</a>
-                            </h5>
-                            <h6 class="mt-0 font-2">1 X 250$</h6>
-                          </div>
-                        </div>
-
-                        <div class="media">
-                          <a href="#">
-                            <img
-                              class="d-flex align-self-start mr-3 width-50px"
-                              src="assets/img/cart-2.jpg"
-                              alt="Generic placeholder image"
-                            />
-                          </a>
-                          <div class="media-body">
-                            <a href="#" class="close"
-                              ><i class="fa fa-window-close"></i
-                            ></a>
-                            <h5 class="mt-0"><a href="#">Air Freight</a></h5>
-                            <h6 class="mt-0 font-2">1 X 250$</h6>
-                          </div>
-                        </div>
-
-                        <div class="media">
-                          <a href="#">
-                            <img
-                              class="d-flex align-self-start mr-3 width-50px"
-                              src="assets/img/cart-3.jpg"
-                              alt="Generic placeholder image"
-                            />
-                          </a>
-                          <div class="media-body">
-                            <a href="#" class="close"
-                              ><i class="fa fa-window-close"></i
-                            ></a>
-                            <h5 class="mt-0">
-                              <a href="#">Packaging & Storage</a>
-                            </h5>
-                            <h6 class="mt-0 font-2">1 X 250$</h6>
-                          </div>
-                        </div>
-
-                        <div class="padding-0px">
-                          <div
-                            class="cart-total background-main-color padding-lr-30px padding-tb-10px text-white"
-                          >
-                            <div class="desc">Subtotal:</div>
-                            <div class="price"><strong>$71.00</strong></div>
-                            <div class="clearfix"></div>
-                          </div>
-                          <a href="#" class="btn btn-primary btn-lg btn-block"
-                            >view cart</a
-                          >
-                          <a
-                            href="#"
-                            class="btn btn-outline-primary btn-lg btn-block"
-                            >Checkout</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="d-none d-xl-block search-link pull-right model-link margin-top-15px"
-                    >
-                      <a
-                        id="search-header"
-                        class="model-link margin-right-0px text-dark opacity-hover-8"
-                        href="#search"
-                      >
-                        <i class="fa fa-sch"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-md-12 d-none d-lg-block">
-                    <a
-                      data-toggle="modal"
-                      data-target=".bd-example-modal-lg"
-                      href="#"
-                      class="btn btn-sm border-radius-30 margin-tb-20px text-white background-main-color box-shadow float-right padding-lr-20px margin-left-30px d-block"
-                    >
-                      <i class="fa fa-envelope-o margin-right-10px"></i> Get A
-                      Quote
+                      <span
+                        class="flag-icon flag-icon-us margin-right-8px"
+                      ></span>
+                      English
                     </a>
+                    <div
+                      class="dropdown-menu text-small text-uppercase"
+                      aria-labelledby="dropdownMenuLink"
+                    >
+                      <a class="dropdown-item" href="#"
+                        ><span
+                          class="flag-icon flag-icon-es margin-right-8px"
+                        ></span>
+                        Spanish</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><span
+                          class="flag-icon flag-icon-mr margin-right-8px"
+                        ></span>
+                        Arabic</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><span
+                          class="flag-icon flag-icon-fr margin-right-8px"
+                        ></span>
+                        French</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><span
+                          class="flag-icon flag-icon-de margin-right-8px"
+                        ></span>
+                        German</a
+                      >
+                    </div>
                   </div>
+                  <!-- // lang dropdown -->
+                </div>
+                <div class="col-lg-6">
+                  <!-- Social -->
+                  
+                  <!-- // Social -->
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- // Up Head -->
+        <div class="position-relative">
+          <div class="row">
+            <div class="col-lg-3 col-md-12">
+              <!-- =========== Change 1 ===========-->
+              <a
+                id="logo"
+                href="home-1.html"
+                class="d-inline-block margin-tb-15px"
+                ><img
+                  src="assets/img/main_bg.png"
+                  width="150px"
+                  alt=""
+              /></a>
+              <a
+                class="mobile-toggle padding-15px background-second-color border-radius-3"
+                href="#"
+                ><i class="fa fa-bars"></i
+              ></a>
+            </div>
+            <div class="col-lg-7 col-md-12 position-inherit">
+              <ul
+                id="menu-main"
+                class="nav-menu float-xl-left text-lg-center link-padding-tb-25px white-link dropdown-dark"
+              >
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+                <li>
+                  <a href="about.html">About</a>
+                </li>
+                <li>
+                  <a href="services.html">Services</a>
+                </li>
+                <li>
+                  <a href="index.html#contact">Contact</a>
+                </li>
+                <li>
+                  <a href="transport.html">Transport</a>
+                </li>
+              </ul>
+
+              <div
+                class="d-none d-xl-block search-link pull-right model-link margin-top-15px"
+              >
+                <a
+                  id="search-header"
+                  class="model-link margin-right-0px text-white opacity-hover-8"
+                  href="#search"
+                >
+                  
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-12 d-none d-lg-block">
+              <a
+                data-toggle="modal"
+                data-target=".bd-example-modal-lg"
+                href="#"
+                class="btn btn-sm border-radius-30 margin-tb-20px text-white background-main-color box-shadow float-right padding-lr-20px margin-left-30px d-block"
+                        style="background-color: #d55e02;">
+                <i class="fa fa-envelope-o margin-right-10px"></i> Get A
+                Quote
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </header>
+    </div>
+  </div>
+</header>
     <!-- // Header  -->
 
     <!-- Search  -->
@@ -352,54 +369,49 @@
     <!-- // Search  -->
 
     <!-- Get A Quote Modal -->
-<div
-      class="modal contact-modal fade bd-example-modal-lg"
-      tabindex="-1"
-      role="dialog"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content margin-top-150px background-main-color">
-          <div class="row no-gutters">
-            <div class="col-lg-5">
-              <!-- Change  16== -->
-              <img
-              
-                src="assets/img/quate4.jpg"
-                alt="Quote"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  display: block;
-                "
-              />
-            </div>
-            <div class="col-lg-7">
-              <div class="padding-30px">
-                <h3 class="padding-bottom-15px">Get A Free Quote</h3>
-                <form>
-                  <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label>Full Name</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="inputName4"
-                        placeholder="Name"
-                      />
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label>Email</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="inputEmail4"
-                        placeholder="Email"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group">
+<div class="modal contact-modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content margin-top-150px" style="background-color: #e96901; border: none;">
+      <div class="row no-gutters">
+        <div class="col-lg-5">
+          <img
+            src="assets/img/quate4.jpg"
+            alt="Quote"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+            "
+          />
+        </div>
+        <div class="col-lg-7">
+          <div class="padding-30px">
+            <h3 class="padding-bottom-15px">Get A Free Quote</h3>
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label>Full Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputName4"
+                    placeholder="Name"
+                  />
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label >Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmail4"
+                    placeholder="Email"
+                    />
+                </div>
+              </div>
+
+            <div class="form-group">
                     <label>Address</label>
                     <input
                       type="text"
@@ -408,15 +420,18 @@
                       placeholder="1234 Main St"
                     />
                   </div>
-                  <div class="form-group">
-                    <label>Message</label>
-                    <textarea
-                      class="form-control"
-                      id="exampleFormControlTextarea1"
-                      rows="3"
-                    ></textarea>
-                  </div>
-                  <a
+
+              <div class="form-group">
+                <label>Message</label>
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                 >
+                </textarea>
+              </div>
+
+              <a
                     href="#"
                     class="btn-sm btn-lg btn-block background-dark text-white text-center text-uppercase rounded-0 padding-15px"
                     >SEND MESSAGE</a
@@ -428,14 +443,14 @@
         </div>
       </div>
     </div>
-<!-- Quate // -->
+
     <div class="page-title">
       <div class="container">
         <div class="padding-tb-120px">
           <h1>Our Transport</h1>
           <ol class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li class="active">Transport</li>
+            <li><a href="index.html" style="text-decoration: none;"></a></li>
+            <li class="active"></li>
           </ol>
         </div>
       </div>
@@ -456,214 +471,428 @@
         </div>
       </div>
 
-      <div class="row">
-        <!-- Fleet Card -->
-        <div class="col-lg-3 col-md-6 margin-bottom-50px">
-          <div class="fleet-card">
-            <div class="img-wrap">
-              <img src="assets/img/truck/1.jpg" alt="Reefer Truck" />
-              <div class="overlay">
-                <h4>1–3 Ton Reefer Truck</h4>
-                <p>Freezer & Chiller Units<br />Ideal for perishable goods</p>
+      
+      <div class="row" id="fleetContainer">
+            <!-- Fleet Card 1 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="reefer">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/1.jpg" alt="Reefer Truck" />
+                  <div class="overlay">
+                    <h4>1–3 Ton Reefer Truck</h4>
+                    <p>Freezer & Chiller Units<br />Ideal for perishable goods</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Fleet Card -->
-        <div class="col-lg-3 col-md-6 margin-bottom-50px">
-          <div class="fleet-card">
-            <div class="img-wrap">
-              <img src="assets/img/truck/2.jpg" alt="Hi Roof Van" />
-              <div class="overlay">
-                <h4>Hi Roof Van</h4>
-                <p>Freezer & Chiller<br />Capacity: up to 40 units</p>
+            <!-- Fleet Card 2 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="reefer">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/7.jpg" alt="Hi Roof Van" />
+                  <div class="overlay">
+                    <h4>Hi Roof Van</h4>
+                    <p>Freezer & Chiller<br />Capacity: up to 40 units</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Fleet Card -->
-        <div class="col-lg-3 col-md-6 margin-bottom-50px">
-          <div class="fleet-card">
-            <div class="img-wrap">
-              <img src="assets/img/truck/3.jpg" alt="Trailer" />
-              <div class="overlay">
-                <h4>Trailer Unit</h4>
-                <p>Heavy Transport<br />Up to 30 Tons</p>
+            <!-- Fleet Card 3 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="heavy">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/3.jpg" alt="Trailer" />
+                  <div class="overlay">
+                    <h4>Trailer Unit</h4>
+                    <p>Heavy Transport<br />Up to 30 Tons</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Fleet Card -->
-        <div class="col-lg-3 col-md-6 margin-bottom-50px">
-          <div class="fleet-card">
-            <div class="img-wrap">
-              <img src="assets/img/truck/4.jpg" alt="Utility Vehicle" />
-              <div class="overlay">
-                <h4>Utility Vehicle</h4>
-                <p>4x4 Double Cabin<br />Support & On-Site Logistics</p>
+            <!-- Fleet Card 4 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="utility">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/9.jpg" alt="Utility Vehicle" />
+                  <div class="overlay">
+                    <h4>Utility Vehicle</h4>
+                    <p>4x4 Double Cabin<br />Support & On-Site Logistics</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-		<!-- Fleet Card -->
-        <div class="col-lg-3 col-md-6 margin-bottom-50px">
-          <div class="fleet-card">
-            <div class="img-wrap">
-              <img src="assets/img/truck/WhatsApp Image 2025-10-28 at 15.56.00_d00346b4.jpg" alt="Utility Vehicle" />
-              <div class="overlay">
-                <h4>Utility Vehicle</h4>
-                <p>4x4 Double Cabin<br />Support & On-Site Logistics</p>
+            <!-- Fleet Card 5 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="utility">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/WhatsApp Image 2025-10-28 at 15.56.00_d00346b4.jpg" alt="Utility Vehicle" />
+                  <div class="overlay">
+                    <h4>Utility Vehicle</h4>
+                    <p>4x4 Double Cabin<br />Support & On-Site Logistics</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-		<!-- Fleet Card -->
-        <div class="col-lg-3 col-md-6 margin-bottom-50px">
-          <div class="fleet-card">
-            <div class="img-wrap">
-              <img src="assets/img/truck/5.png" alt="Utility Vehicle" />
-              <div class="overlay">
-                <h4>Utility Vehicle</h4>
-                <p>4x4 Double Cabin<br />Support & On-Site Logistics</p>
+            <!-- Fleet Card 6 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="utility">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/5.png" alt="Utility Vehicle" />
+                  <div class="overlay">
+                    <h4>Utility Vehicle</h4>
+                    <p>4x4 Double Cabin<br />Support & On-Site Logistics</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-		<!-- Fleet Card -->
-        <div class="col-lg-3 col-md-6 margin-bottom-50px">
-          <div class="fleet-card">
-            <div class="img-wrap">
-              <img src="assets/img/truck/6.png" alt="Utility Vehicle" />
-              <div class="overlay">
-                <h4>Utility Vehicle</h4>
-                <p>4x4 Double Cabin<br />Support & On-Site Logistics</p>
+            <!-- Fleet Card 7 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="utility">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/f7.jpg" alt="Utility Vehicle" />
+                  <div class="overlay">
+                    <h4>Utility Vehicle</h4>
+                    <p>4x4 Double Cabin<br />Support & On-Site Logistics</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-		<!-- Fleet Card -->
-        <div class="col-lg-3 col-md-6 margin-bottom-50px">
-          <div class="fleet-card">
-            <div class="img-wrap">
-              <img src="assets/img/truck/WhatsApp Image 2025-10-28 at 15.55.51_eea5f326.jpg" alt="Utility Vehicle" />
-              <div class="overlay">
-                <h4>Utility Vehicle</h4>
-                <p>4x4 Double Cabin<br />Support & On-Site Logistics</p>
+            <!-- Fleet Card 8 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="reefer">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/WhatsApp Image 2025-10-28 at 15.55.51_eea5f326.jpg" alt="Refrigerated Van" />
+                  <div class="overlay">
+                    <h4>Refrigerated Van</h4>
+                    <p>Temperature Control<br />Perfect for Fresh Goods</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 9 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="heavy">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/f21.jpg" alt="Heavy Transport" />
+                  <div class="overlay">
+                    <h4>Heavy Transport Vehicle</h4>
+                    <p>Specialized Heavy Duty<br />Support & On-Site Logistics</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 10 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="reefer">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/2.jpg" alt="Refrigerated Van" />
+                  <div class="overlay">
+                    <h4>Refrigerated Van</h4>
+                    <p>Temperature Control<br />Perfect for Fresh Goods</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 11 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="heavy">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/f23.jpg" alt="Cargo Truck" />
+                  <div class="overlay">
+                    <h4>Cargo Truck</h4>
+                    <p>General Cargo Transport<br />Reliable & Efficient</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 12 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="utility">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/4.jpg" alt="Support Vehicle" />
+                  <div class="overlay">
+                    <h4>Support Vehicle</h4>
+                    <p>On-Site Support<br />Utility & Logistics</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 13 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="reefer">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/5.png" alt="Chiller Van" />
+                  <div class="overlay">
+                    <h4>Chiller Van</h4>
+                    <p>Temperature Monitored<br />Perishable Goods Expert</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 14 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="heavy">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/6.png" alt="Heavy Duty Truck" />
+                  <div class="overlay">
+                    <h4>Heavy Duty Truck</h4>
+                    <p>Maximum Load Capacity<br />Industrial Transport</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 15 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="utility">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/1.jpg" alt="Utility Support" />
+                  <div class="overlay">
+                    <h4>Utility Support</h4>
+                    <p>Multi-Purpose Vehicle<br />Complete Logistics Support</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 16 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="reefer">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/f216.jpg" alt="Freezer Truck" />
+                  <div class="overlay">
+                    <h4>Freezer Truck</h4>
+                    <p>Deep Freeze Transport<br />For Ice Cream & Frozen Foods</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 17 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="heavy">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/f31.jpg" alt="Flatbed Truck" />
+                  <div class="overlay">
+                    <h4>Flatbed Truck</h4>
+                    <p>Heavy Equipment Transport<br />Industrial Solutions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 18 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="utility">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/f32.jpg" alt="Support Van" />
+                  <div class="overlay">
+                    <h4>Support Van</h4>
+                    <p>Mobile Support Unit<br />Field Operations</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 19 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="reefer">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/5.png" alt="Temperature Van" />
+                  <div class="overlay">
+                    <h4>Temperature Van</h4>
+                    <p>Climate Controlled<br />Pharmaceutical Transport</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 20 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="heavy">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/f34.jpg" alt="Tipper Truck" />
+                  <div class="overlay">
+                    <h4>Tipper Truck</h4>
+                    <p>Bulk Material Transport<br />Construction Solutions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 21 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="utility">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/1.jpg" alt="Pickup Truck" />
+                  <div class="overlay">
+                    <h4>Pickup Truck</h4>
+                    <p>Compact Delivery<br />Quick Logistics</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 22 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="reefer">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/2.jpg" alt="Insulated Van" />
+                  <div class="overlay">
+                    <h4>Insulated Van</h4>
+                    <p>Food Grade Transport<br />Dairy & Bakery Products</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 23 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="heavy">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/3.jpg" alt="Lowbed Truck" />
+                  <div class="overlay">
+                    <h4>Lowbed Truck</h4>
+                    <p>Oversized Cargo<br />Heavy Machinery Transport</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fleet Card 24 -->
+            <div class="col-lg-3 col-md-6 margin-bottom-50px fleet-item" data-category="utility">
+              <div class="fleet-card">
+                <div class="img-wrap">
+                  <img src="assets/img/truck/4.jpg" alt="Chase Vehicle" />
+                  <div class="overlay">
+                    <h4>Chase Vehicle</h4>
+                    <p>Escort Services<br />Convoy Support</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Pagination -->
+          <ul class="pagination pagination-md" id="paginationContainer">
+            <li class="page-item" id="prevBtn"><a class="page-link" href="javascript:void(0)" onclick="previousPage()">Previous</a></li>
+            <li class="page-item active" id="page1"><a class="page-link" href="javascript:void(0)" onclick="goToPage(1)">1</a></li>
+            <li class="page-item" id="page2"><a class="page-link" href="javascript:void(0)" onclick="goToPage(2)">2</a></li>
+            <li class="page-item" id="page3"><a class="page-link" href="javascript:void(0)" onclick="goToPage(3)">3</a></li>          
+            <li class="page-item" id="nextBtn"><a class="page-link" href="javascript:void(0)" onclick="nextPage()">Next</a></li>
+          </ul>
         </div>
       </div>
-
-      <!-- Pagination (unchanged) -->
-      <ul class="pagination pagination-md">
-        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
-        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-      </ul>
     </div>
-  </div>
-</div>
 
-<style>
-/* ---- fleet card base ---- */
-.fleet-card {
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  background: #fff;
-}
+    <script>
+      let currentPage = 1;
+      const itemsPerPage = 8;
+      let filteredItems = [];
+      let currentFilter = 'all';
 
-/* lift on hover */
-.fleet-card:hover {
-  transform: translateY(-5px);
-}
+      function getFilteredItems() {
+        const allItems = document.querySelectorAll('.fleet-item');
+        if (currentFilter === 'all') {
+          return Array.from(allItems);
+        } else {
+          return Array.from(allItems).filter(item => item.dataset.category === currentFilter);
+        }
+      }
 
-/* make the image container RELATIVE so overlay can sit absolutely on top */
-.fleet-card .img-wrap {
-  position: relative;          /* IMPORTANT - allows overlay to position over image */
-  width: 100%;
-  height: 250px;               /* fixed uniform height */
-  overflow: hidden;
-  background-color: #f5f5f5;
-  display: block;
-}
+      function displayPage(page) {
+        filteredItems = getFilteredItems();
+        const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+        
+        if (page < 1) page = 1;
+        if (page > totalPages) page = totalPages;
+        
+        currentPage = page;
 
-/* ensure image fills the box and stays centered */
-.fleet-card .img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
+        // Hide all items
+        filteredItems.forEach(item => item.classList.add('hidden-fleet'));
 
-/* overlay sits exactly on top of image */
-.fleet-card .img-wrap .overlay {
-  position: absolute;
-  inset: 0;                    /* top:0; right:0; bottom:0; left:0 */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 18px;
-  background: rgba(0,0,0,0.66); /* semi-transparent dark layer */
-  color: #fff;
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-  z-index: 2;
-  pointer-events: none;        /* avoid accidental hover clicks when invisible */
-}
+        // Show items for current page
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        for (let i = startIndex; i < endIndex && i < filteredItems.length; i++) {
+          filteredItems[i].classList.remove('hidden-fleet');
+        }
 
-/* reveal overlay when hovering the image area */
-.fleet-card .img-wrap:hover .overlay,
-.fleet-card .img-wrap:focus .overlay {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
+        // Update pagination info
+        const totalItems = filteredItems.length;
+        document.querySelector('p.padding-top-5px').textContent = 'Showing ' + (startIndex + 1) + '–' + Math.min(endIndex, totalItems) + ' of ' + totalItems + ' Fleet';
 
-/* overlay text styling */
-.fleet-card .img-wrap .overlay h4 {
-  font-size: 18px;
-  margin: 0 0 8px;
-  color: #ffcc00;
-  line-height: 1.1;
-}
+        // Update pagination buttons
+        updatePaginationButtons(totalPages);
+      }
 
-.fleet-card .img-wrap .overlay p {
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 0;
-  max-width: 90%;
-}
+      function updatePaginationButtons(totalPages) {
+        // Hide all page buttons first
+        document.getElementById('page1').style.display = 'none';
+        document.getElementById('page2').style.display = 'none';
+        document.getElementById('page3').style.display = 'none';
 
-/* 4-per-row on desktop, keep responsive on small screens */
-@media (min-width: 992px) {
-  .col-lg-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
-}
-</style>
+        // Show only needed page buttons
+        if (totalPages >= 1) {
+          document.getElementById('page1').style.display = 'block';
+          document.getElementById('page1').className = currentPage === 1 ? 'page-item active' : 'page-item';
+        }
+        if (totalPages >= 2) {
+          document.getElementById('page2').style.display = 'block';
+          document.getElementById('page2').className = currentPage === 2 ? 'page-item active' : 'page-item';
+        }
+        if (totalPages >= 3) {
+          document.getElementById('page3').style.display = 'block';
+          document.getElementById('page3').className = currentPage === 3 ? 'page-item active' : 'page-item';
+        }
 
+        // Disable/enable prev and next buttons
+        document.getElementById('prevBtn').className = currentPage === 1 ? 'page-item disabled' : 'page-item';
+        document.getElementById('nextBtn').className = currentPage === totalPages ? 'page-item disabled' : 'page-item';
+      }
 
+      function goToPage(page) {
+        displayPage(page);
+      }
 
+      function nextPage() {
+        filteredItems = getFilteredItems();
+        const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+        if (currentPage < totalPages) {
+          displayPage(currentPage + 1);
+        }
+      }
 
+      function previousPage() {
+        if (currentPage > 1) {
+          displayPage(currentPage - 1);
+        }
+      }
 
+      function filterCategory() {
+        const select = document.getElementById('inlineFormCustomSelect');
+        currentFilter = select.value;
+        currentPage = 1;
+        displayPage(1);
+      }
+
+      // Initial display
+      displayPage(1);
+    </script>
     <footer class="layout-light">
       <div class="container padding-tb-100px">
         <div class="row">
@@ -707,7 +936,7 @@
               <h2 class="title">Quick Links</h2>
               <ul class="footer-menu">
                   <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about ">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Our Services</a></li>
                 <li><a href="index.html#client">Our Clients</a></li>
                 <li><a href="index.html#contact">Contact Us</a></li>
@@ -751,12 +980,50 @@
     </div>
 </div>
 </footer>
+ <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jquery library  -->
+    <script src="assets/js/nile-slider.js"></script>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="assets/rslider/js/jquery.themepunch.tools.min.js"></script>
+    <script src="assets/rslider/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS -->
+    <script src="assets/rslider/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="assets/rslider/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="assets/rslider/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="assets/rslider/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="assets/rslider/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="assets/rslider/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="assets/rslider/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="assets/rslider/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="assets/rslider/js/extensions/revolution.extension.video.min.js"></script>
     <script src="assets/js/YouTubePopUp.jquery.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/imagesloaded.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+        </script>
   </body>
 
   <!-- shop-4-columns02:28-->

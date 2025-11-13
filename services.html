@@ -201,7 +201,15 @@
             margin: 0 auto;
             animation: fadeInUp 1s ease;
         }
-        
+     header {
+        position: sticky !important;
+       top: 0;
+       z-index: 9999;
+       opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+}
+
         .section-padding {
             padding: 5rem 0;
         }
@@ -256,161 +264,242 @@
 </head>
 <body class="background-white">
         <!--  Header  -->
-  <header>
-  <div id="fixed-header-dark" class="header-output fixed-header">
-    <div class="header-output">
-      <div class="container header-in">
-        <!-- Up Head -->
-        <div class="up-head d-none d-lg-block">
-          <div class="row">
-            <div class="col-xl-8 col-lg-12">
-              <div class="row">
-                <div class="col-md-4">
-                  <i class="fa fa-phone margin-right-10px"></i> +971 55 833
-                  0167
-                </div>
-                <div class="col-md-4">
-                  <i class="fa fa-envelope-o margin-right-10px"></i>
-                  info@nextgentransport.com
-                </div>
-                <div class="col-md-4">
-                  <i class="fa fa-map-marker margin-right-10px"></i> Next
-                  Gen HQ
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 d-none d-xl-block">
-              <div class="row">
-                <div class="col-lg-6">
-                  <!-- lang dropdown -->
-                  <div class="dropdown show">
-                    <a
-                      class="dropdown-toggle text-white text-uppercase"
-                      href="#"
-                      role="button"
-                      id="dropdownMenuLink"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <span
-                        class="flag-icon flag-icon-us margin-right-8px"
-                      ></span>
-                      English
-                    </a>
-                    <div
-                      class="dropdown-menu text-small text-uppercase"
-                      aria-labelledby="dropdownMenuLink"
-                    >
-                      <a class="dropdown-item" href="#"
-                        ><span
-                          class="flag-icon flag-icon-es margin-right-8px"
-                        ></span>
-                        Spanish</a
-                      >
-                      <a class="dropdown-item" href="#"
-                        ><span
-                          class="flag-icon flag-icon-mr margin-right-8px"
-                        ></span>
-                        Arabic</a
-                      >
-                      <a class="dropdown-item" href="#"
-                        ><span
-                          class="flag-icon flag-icon-fr margin-right-8px"
-                        ></span>
-                        French</a
-                      >
-                      <a class="dropdown-item" href="#"
-                        ><span
-                          class="flag-icon flag-icon-de margin-right-8px"
-                        ></span>
-                        German</a
-                      >
+    <header class="background-white">
+      <div class="header-output">
+        <div class="header-output">
+          <div class="header-in">
+            <!-- Up Head -->
+            <div class="up-head d-none d-lg-block background-grey-4">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xl-8 col-lg-12">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <i class="fa fa-phone margin-right-10px"></i> +971 55
+                        833 0167
+                      </div>
+                      <div class="col-md-4">
+                        <i class="fa fa-envelope-o margin-right-10px"></i>
+                        info@nextgentransport.com
+                      </div>
+                      <div class="col-md-4">
+                        <i class="fa fa-map-marker margin-right-10px"></i> Next
+                        Gen HQ
+                      </div>
                     </div>
                   </div>
-                  <!-- // lang dropdown -->
-                </div>
-                <div class="col-lg-6">
-                  <!-- Social -->
-                  
-                  <!-- // Social -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- // Up Head -->
-        <div class="position-relative">
-          <div class="row">
-            <div class="col-lg-3 col-md-12">
-              <!-- =========== Change 1 ===========-->
-              <a
-                id="logo"
-                href="home-1.html"
-                class="d-inline-block margin-tb-15px"
-                ><img
-                  src="assets/img/main_bg.png"
-                  width="150px"
-                  alt=""
-              /></a>
-              <a
-                class="mobile-toggle padding-15px background-second-color border-radius-3"
-                href="#"
-                ><i class="fa fa-bars"></i
-              ></a>
-            </div>
-            <div class="col-lg-7 col-md-12 position-inherit">
-              <ul
-                id="menu-main"
-                class="nav-menu float-xl-left text-lg-center link-padding-tb-25px white-link dropdown-dark"
-              >
-                <li>
-                  <a href="index.html">Home</a>
-                </li>
-                <li>
-                  <a href="index.html#about ">About</a>
-                </li>
-                <li>
-                  <a href="services.html">Services</a>
-                </li>
-                <li>
-                  <a href="index.html#contact">Contact</a>
-                </li>
-                <li>
-                  <a href="transport.html">Transport</a>
-                </li>
-              </ul>
+                  <div class="col-xl-4 d-none d-xl-block">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <!-- lang dropdown -->
+                        <div class="dropdown show">
+                          <a
+                            class="dropdown-toggle text-white text-uppercase"
+                            href="#"
+                            role="button"
+                            id="dropdownMenuLink"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            <span
+                              class="flag-icon flag-icon-us margin-right-8px"
+                            ></span>
+                            English
+                          </a>
 
-              <div
-                class="d-none d-xl-block search-link pull-right model-link margin-top-15px"
-              >
-                <a
-                  id="search-header"
-                  class="model-link margin-right-0px text-white opacity-hover-8"
-                  href="#search"
-                >
-                  <i class="fa fa-search"></i>
-                </a>
+                          <div
+                            class="dropdown-menu text-small text-uppercase"
+                            aria-labelledby="dropdownMenuLink"
+                          >
+                            <a class="dropdown-item" href="#"
+                              ><span
+                                class="flag-icon flag-icon-es margin-right-8px"
+                              ></span>
+                              Spanish</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><span
+                                class="flag-icon flag-icon-mr margin-right-8px"
+                              ></span>
+                              Arabic</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><span
+                                class="flag-icon flag-icon-fr margin-right-8px"
+                              ></span>
+                              French</a
+                            >
+                            <a class="dropdown-item" href="#"
+                              ><span
+                                class="flag-icon flag-icon-de margin-right-8px"
+                              ></span>
+                              German</a
+                            >
+                          </div>
+                        </div>
+                        <!-- // lang dropdown -->
+                      </div>
+
+                      <div class="col-lg-6">
+                        <!--  Social -->
+                        <!-- // Social -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-2 col-md-12 d-none d-lg-block">
-              <a
-                data-toggle="modal"
-                data-target=".bd-example-modal-lg"
-                href="#"
-                class="btn btn-sm border-radius-30 margin-tb-20px text-white box-shadow float-right padding-lr-20px margin-left-30px d-block"
-                style="background-color: #f16806d6;"
-              >
-                <i class="fa fa-envelope-o margin-right-10px"></i> Get A
-                Quote
-              </a>
+            <!-- // Up Head -->
+            <div class="container">
+              <div class="position-relative">
+                <div class="row">
+                  <div class="col-lg-3 col-md-12">
+                    <a
+                      id="logo"
+                      href="home-1.html"
+                      class="d-inline-block margin-tb-15px"
+                      ><img src="assets/img/No bg.png" width="120px" alt=""
+                    /></a>
+                    <a
+                      class="mobile-toggle padding-15px background-second-color border-radius-3"
+                      href="#"
+                      ><i class="fa fa-bars"></i
+                    ></a>
+                  </div>
+                  <div class="col-lg-7 col-md-12 position-inherit">
+                    <ul
+                      id="menu-main"
+                      class="nav-menu float-xl-left text-lg-center link-padding-tb-25px dropdown-dark"
+                    >
+                        <li>
+                          <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                          <a href="about.html">About</a>
+                        </li>
+                        <li>
+                          <a href="services.html">Services</a>
+                        </li>
+                        <li>
+                          <a href="index.html#contact">Contact</a>
+                        </li>
+                        <li>
+                          <a href="transport.html">Transport</a>
+                        </li>
+                      </ul>
+                    </ul>
+
+                    <div
+                      class="d-none d-xl-block pull-right model-link margin-top-15px"
+                    >
+                      <a
+                        id="cart-link"
+                        class="model-link margin-right-25px text-dark opacity-hover-8"
+                        href="#"
+                      >
+                        <span>3</span>
+                      </a>
+                      <div class="cart-model">
+                        <div class="media">
+                          <a href="#">
+                            <img
+                              class="d-flex align-self-start mr-3 width-50px"
+                              src="assets/img/cart-1.jpg"
+                              alt="Generic placeholder image"
+                            />
+                          </a>
+                          <div class="media-body">
+                            <a href="#" class="close"
+                              ><i class="fa fa-window-close"></i
+                            ></a>
+                            <h5 class="mt-0">
+                              <a href="#">Cargo Transportation</a>
+                            </h5>
+                            <h6 class="mt-0 font-2">1 X 250$</h6>
+                          </div>
+                        </div>
+
+                        <div class="media">
+                          <a href="#">
+                            <img
+                              class="d-flex align-self-start mr-3 width-50px"
+                              src="assets/img/cart-2.jpg"
+                              alt="Generic placeholder image"
+                            />
+                          </a>
+                          <div class="media-body">
+                            <a href="#" class="close"
+                              ><i class="fa fa-window-close"></i
+                            ></a>
+                            <h5 class="mt-0"><a href="#">Air Freight</a></h5>
+                            <h6 class="mt-0 font-2">1 X 250$</h6>
+                          </div>
+                        </div>
+
+                        <div class="media">
+                          <a href="#">
+                            <img
+                              class="d-flex align-self-start mr-3 width-50px"
+                              src="assets/img/cart-3.jpg"
+                              alt="Generic placeholder image"
+                            />
+                          </a>
+                          <div class="media-body">
+                            <a href="#" class="close"
+                              ><i class="fa fa-window-close"></i
+                            ></a>
+                            <h5 class="mt-0">
+                              <a href="#">Packaging & Storage</a>
+                            </h5>
+                            <h6 class="mt-0 font-2">1 X 250$</h6>
+                          </div>
+                        </div>
+
+                        <div class="padding-0px">
+                          <div
+                            class="cart-total background-main-color padding-lr-30px padding-tb-10px text-white"
+                          >
+                            <div class="desc">Subtotal:</div>
+                            <div class="price"><strong>$71.00</strong></div>
+                            <div class="clearfix"></div>
+                          </div>
+                          <a href="#" class="btn btn-primary btn-lg btn-block"
+                            >view cart</a
+                          >
+                          <a
+                            href="#"
+                            class="btn btn-outline-primary btn-lg btn-block"
+                            >Checkout</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="d-none d-xl-block search-link pull-right model-link margin-top-15px"
+                    >
+                    
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-12 d-none d-lg-block">
+                    <a
+                      data-toggle="modal"
+                      data-target=".bd-example-modal-lg"
+                      href="#"
+                      class="btn btn-sm border-radius-30 margin-tb-20px text-white background-main-color box-shadow float-right padding-lr-20px margin-left-30px d-block"
+                        style="background-color: #d55e02;">
+
+                      <i class="fa fa-envelope-o margin-right-10px"></i> Get A
+                      Quote
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</header>
+    </header>
     <!-- // Header  -->
 
     <!-- Search  -->
@@ -423,82 +512,84 @@
     </div>
     <!-- // Search  -->
 
-    <!-- Get A Quote Modal -->
-<div class="modal contact-modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content margin-top-150px" style="background-color: #ff6a00; border: none;">
-      <div class="row no-gutters">
-        <div class="col-lg-5">
-          <img
-            src="assets/img/quate4.jpg"
-            alt="Quote"
-            style="
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              display: block;
-            "
-          />
-        </div>
-        <div class="col-lg-7">
-          <div class="padding-30px">
-            <h3 class="padding-bottom-15px" style="color: white; font-size: 28px; font-weight: bold;">Get A Free Quote</h3>
-            <form>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label style="color: white; font-size: 16px; font-weight: 500;">Full Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="inputName4"
-                    placeholder="Name"
-                    style="background-color: rgba(255,255,255,0.1); border: 1px solid white; color: white; padding: 12px;"
-                  />
-                </div>
-                <div class="form-group col-md-6">
-                  <label style="color: white; font-size: 16px; font-weight: 500;">Email</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="inputEmail4"
-                    placeholder="Email"
-                    style="background-color: rgba(255,255,255,0.1); border: 1px solid white; color: white; padding: 12px;"
-                  />
-                </div>
+    <!-- Get A Quote  -->
+     <div
+      class="modal contact-modal fade bd-example-modal-lg"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content margin-top-150px background-main-color"style="background-color:#d55e02; border: none;">
+          <div class="row no-gutters">
+            <div class="col-lg-5">
+              <img
+                src="assets/img/quate4.jpg"
+                alt="Quote"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  display: block;
+                "
+              />
+            </div>
+             <div class="col-lg-7">
+              <div class="padding-30px">
+                <h3 class="padding-bottom-15px">Get A Free Quote</h3>
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label>Full Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputName4"
+                        placeholder="Name"
+                      />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label>Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="inputEmail4"
+                        placeholder="Email"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Address</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputAddress"
+                      placeholder="1234 Main St"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Message</label>
+                    <textarea
+                      class="form-control"
+                      id="exampleFormControlTextarea1"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                  <a
+                    href="#"
+                    class="btn-sm btn-lg btn-block background-dark text-white text-center text-uppercase rounded-0 padding-15px"
+                    >SEND MESSAGE</a
+                  >
+                </form>
               </div>
-              <div class="form-group">
-                <label style="color: white; font-size: 16px; font-weight: 500;">Address</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputAddress"
-                  placeholder="1234 Main St"
-                  style="background-color: rgba(255,255,255,0.1); border: 1px solid white; color: white; padding: 12px;"
-                />
-              </div>
-              <div class="form-group">
-                <label style="color: white; font-size: 16px; font-weight: 500;">Message</label>
-                <textarea
-                  class="form-control"
-                  id="exampleFormControlTextarea1"
-                  rows="3"
-                  style="background-color: rgba(255,255,255,0.1); border: 1px solid white; color: white; padding: 12px;"
-                ></textarea>
-              </div>
-              <a
-                href="#"
-                class="btn-sm btn-lg btn-block text-white text-center text-uppercase rounded-0 padding-15px"
-                style="background-color: #2c2c2c; text-decoration: none; display: block; font-weight: bold;"
-              >
-                SEND MESSAGE
-              </a>
-            </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+    <!-- // Get A Quote  -->
+
     <!-- Services Header -->
     <section class="service-header">
         <div class="container">
@@ -508,7 +599,6 @@
     </section>
 
     <!-- Temperature-Controlled Logistics -->
-     <!-- Change 21=== -->
     <section class="section-padding">
         <div class="container">
             <div class="section-title animate-on-scroll">
@@ -698,58 +788,53 @@
 
 
 
-    <!-- Regional Reach -->
-   <section class="section-padding">
+   <!-- Regional Reach -->
+<section class="section-padding">
     <div class="container">
-        <div class="section-title animate-on-scroll text-center">
+        <div class="section-title animate-on-scroll text-center mb-5">
             <h2>Regional Reach</h2>
             <div class="divider"></div>
         </div>
-        
-        <div class="row align-items-stretch"> <!-- Changed to align-items-stretch -->
-            <!-- Box 1: Comprehensive Coverage -->
-            <div class="col-lg-6 mb-4 animate-on-scroll">
-                <div class="card service-card h-100">
-                    <div class="card-body p-4 d-flex flex-column">
+
+        <div class="row align-items-stretch">
+            <!-- Left Card -->
+            <div class="col-lg-6 mb-4 animate-on-scroll d-flex">
+                <div class="card service-card h-100 w-100">
+                    <div class="card-body p-4">
                         <div class="service-icon">
                             <i class="fas fa-map-marked-alt"></i>
                         </div>
-                        <h3 class="text-center mb-3">Comprehensive Coverage</h3>
-                        <p class="text-center mb-4 text-muted">Extensive logistics network across the UAE and GCC region</p>
-                        
-                        <div class="flex-grow-1"> <!-- This makes content take equal space -->
-                            <ul class="list-unstyled mb-0">
-                                <li class="service-feature">Within UAE and across the GCC</li>
-                                <li class="service-feature">Cross-border delivery solutions</li>
-                                <li class="service-feature">Real-time visibility and compliance tracking</li>
-                                <li class="service-feature">Customs clearance assistance</li>
-                                <li class="service-feature">Regional expertise and local partnerships</li>
-                            </ul>
-                        </div>
+                        <h3 class="text-center" style="font-size: 1.2rem;">Comprehensive Coverage</h3>
+                        <p class="text-center mb-3" style="font-size: 0.9rem;">Extensive logistics network across the UAE and GCC region</p>
+                        <ul class="list-unstyled" style="font-size: 0.9rem;">
+                            <li class="service-feature">Within UAE and across the GCC</li>
+                            <li class="service-feature">Cross-border delivery solutions</li>
+                            <li class="service-feature">Real-time visibility and compliance tracking</li>
+                            <li class="service-feature">Customs clearance assistance</li>
+                            <li class="service-feature">Regional expertise and local partnerships</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Box 2: GCC Network -->
-            <div class="col-lg-6 mb-4 animate-on-scroll">
-                <div class="card service-card h-100">
-                    <div class="card-body p-4 d-flex flex-column">
-                        <div class="service-icon">
-                            <i class="fas fa-globe-asia"></i>
-                        </div>
-                        <h3 class="text-center mb-3">GCC Network</h3>
-                        <p class="text-center mb-4 text-muted">Our extensive regional network ensures seamless logistics operations across all GCC countries with local expertise and compliance knowledge.</p>
-                        
-                        <div class="flex-grow-1 d-flex align-items-center justify-content-center"> <!-- Equal height and center content -->
-                            <div class="text-center w-100">
-                                <div class="d-flex flex-wrap justify-content-center gap-2">
-                                    <span class="badge bg-primary">UAE</span>
-                                    <span class="badge bg-primary">Saudi Arabia</span>
-                                    <span class="badge bg-primary">Qatar</span>
-                                    <span class="badge bg-primary">Kuwait</span>
-                                    <span class="badge bg-primary">Oman</span>
-                                    <span class="badge bg-primary">Bahrain</span>
-                                </div>
+            <!-- Right Card -->
+            <div class="col-lg-6 mb-4 animate-on-scroll d-flex">
+                <div class="card gcc-card h-100 w-100">
+                    <div class="card-body p-4 d-flex align-items-center justify-content-center">
+                        <div class="text-center">
+                            <i class="fas fa-globe-asia mb-3" style="font-size: 2.3rem; color: #6c757d;"></i>
+                            <h3 class="mb-3" style="font-size: 1.2rem; color: #2c3e50;">GCC Network</h3>
+                            <p class="mb-3" style="font-size: 0.9rem; color: #6c757d;">
+                                Our extensive regional network ensures seamless logistics operations across all GCC countries
+                                with local expertise and compliance knowledge.
+                            </p>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <span class="badge m-1 p-2" style="background-color: #6c757d; color: white;">UAE</span>
+                                <span class="badge m-1 p-2" style="background-color: #6c757d; color: white;">Saudi Arabia</span>
+                                <span class="badge m-1 p-2" style="background-color: #6c757d; color: white;">Qatar</span>
+                                <span class="badge m-1 p-2" style="background-color: #6c757d; color: white;">Kuwait</span>
+                                <span class="badge m-1 p-2" style="background-color: #6c757d; color: white;">Oman</span>
+                                <span class="badge m-1 p-2" style="background-color: #6c757d; color: white;">Bahrain</span>
                             </div>
                         </div>
                     </div>
@@ -757,118 +842,100 @@
             </div>
         </div>
     </div>
+
     <style>
-      /* Regional Reach Section Styling */
-.section-padding {
-    position: relative;
-    padding: 80px 0;
-}
+        .section-padding {
+            position: relative;
+            padding: 60px 0;
+        }
 
-.section-padding::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('assets/img/center.png'); /* YAHAN IMAGE PATH DIYA */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.6; /* Low opacity */
-    z-index: -1;
-}
+        .section-padding::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('assets/img/center.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            z-index: -1;
+        }
 
-.section-padding > .container {
-    position: relative;
-    z-index: 1;
-}
+        .section-padding > .container {
+            position: relative;
+            z-index: 1;
+        }
 
-/* Service Card Redesign */
-.service-card {
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    overflow: hidden;
-}
+        /* Common Card Styling */
+        .service-card,
+        .gcc-card {
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            background-color: #fff;
+        }
 
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-}
+        .service-card:hover,
+        .gcc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
 
-.service-icon {
-    text-align: center;
-    margin-bottom: 20px;
-}
+        /* GCC Card Specific Hover */
+        .gcc-card {
+            background-color: #f8f9fa;
+        }
 
-.service-icon i {
-    font-size: 3rem;
-    color: #6c757d; /* Grey color for icons */
-    margin-bottom: 15px;
-    transition: color 0.3s ease;
-}
+        .gcc-card:hover {
+            border-color: #e96901;
+            box-shadow: 0 5px 15px rgba(233, 105, 1, 0.3);
+        }
 
-.service-card:hover .service-icon i {
-    color: #495057; /* Darker grey on hover */
-}
+        .gcc-card:hover h3,
+        .gcc-card:hover i,
+        .gcc-card:hover p {
+            color: #e96901 !important;
+        }
 
-/* Badges styling */
-.badge {
-    border-radius: 20px;
-    font-weight: 500;
-    padding: 8px 16px;
-    font-size: 0.85rem;
-}
+        .service-icon {
+            text-align: center;
+            margin-bottom: 15px;
+        }
 
-.badge.bg-primary {
-    background-color: #6c757d !important; /* Grey color */
-    color: white;
-    border: none;
-}
+        .service-icon i {
+            font-size: 2.3rem;
+            color: #6c757d;
+        }
 
-/* List items styling */
-.service-feature {
-    padding: 10px 0;
-    border-bottom: 1px solid #f0f0f0;
-    position: relative;
-    padding-left: 30px;
-    font-size: 0.95rem;
-}
+        .service-feature {
+            padding: 6px 0;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+            padding-left: 25px;
+            font-size: 0.9rem;
+        }
 
-.service-feature:before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #6c757d; /* Grey checkmark */
-    font-weight: bold;
-    font-size: 1.1rem;
-}
+        .service-feature:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #6c757d;
+            font-weight: bold;
+        }
 
-.service-feature:last-child {
-    border-bottom: none;
-}
+        .service-feature:last-child {
+            border-bottom: none;
+        }
 
-/* Section title styling */
-.section-title h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
-.divider {
-    width: 60px;
-    height: 3px;
-    background: #6c757d;
-    margin: 0 auto 2rem;
-    border-radius: 2px;
-}
+        .align-items-stretch .col-lg-6 {
+            display: flex;
+        }
     </style>
 </section>
+
 
     <footer class="layout-light">
       <div class="container padding-tb-100px">
@@ -906,27 +973,27 @@
               </ul>     
             </div>
           </div>
-            <!-- Change 22  -->
+
           <!-- Quick Links -->
           <div class="col-lg-3 col-md-6">
             <div class="nile-widget widget_nav_menu sm-mb-45px">
               <h2 class="title">Quick Links</h2>
               <ul class="footer-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about ">About</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Our Services</a></li>
-                <li><a href="index.html#client">Our Clients</a></li>
+                <li><a href="index.html#clients">Our Clients</a></li>
                 <li><a href="index.html#contact">Contact Us</a></li>
               </ul>
             </div>
           </div>
+
           <!-- Contact Info -->
           <div class="col-lg-3 col-md-6">
             <div class="nile-widget widget_nav_menu sm-mb-45px">
               <h2 class="title">Contact Info</h2>
               <ul class="footer-menu">
-                <!-- Change 23 -->
-                <li><strong>Address:</strong>Al Shaali Building,3rd Floor,office#319 <br/>Al Quais Industrial Area 1,Dubai, UAE</li>
+                <li><strong>Address:</strong> Al Shaali Building,3rd Floor,office#319 <br/>Al Quais Industrial Area 1,Dubai, UAE</li>
                 <li><strong>Email:</strong> info@nextgentransport.com</li>
                 <li><strong>Phone:</strong> +971 55 833 0167</li>
                 <li><strong>Hours:</strong> Mon–Sat: 8:00 AM – 6:00 PM</li>
@@ -938,12 +1005,12 @@
 
       <!-- Copyright Section -->
       <div class="copy-right">
-    <div class="container padding-tb-50px">
-        <div class="row align-items-center">
+        <div class="container padding-tb-50px">
+          <div class="row align-items-center">
             <div class="col-lg-6 text-lg-left text-center sm-mb-15px">
-                ©
-                <script>
-                    document.write(new Date().getFullYear());
+              ©
+              <script>
+                document.write(new Date().getFullYear());
                 </script>
                 Next Generation Transport L.L.C. All rights reserved.
             </div>
